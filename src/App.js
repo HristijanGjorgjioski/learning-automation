@@ -1,10 +1,20 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import './App.css';
+import Test from './Test/Test';
 
 function App() {
   return (
-    <div className="App">
-      Hristijan
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="test" element={<Test />} />
+        Hristijan / url
+      </Routes>
+    </BrowserRouter>
   );
 }
 
