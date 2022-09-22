@@ -9,11 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/setup-node@v2
+        - uses: actions/checkout@v1
           with:
             node-version: '16'
-        - run: cd /server
-        - run: npm ci        
-        - run: npm run build        
-        - run: cd /../client
-        - run: npm ci        
-        - run: npm run build
+        - name: Server Tests
+        - run: |-
+              cd /server
+              npm ci        
+              npm run build 
+
+        - name: FE Tests
+        - run: |- 
+              cd /../client
+              npm ci        
+              npm run build
