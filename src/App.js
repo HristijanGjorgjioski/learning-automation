@@ -9,7 +9,7 @@ import Test from './Test/Test';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'https://hristijangjorgjioski.github.io/learning-automation'}>
       <Routes>
         <Route path="test" element={<Test />} />
         Hristijan / url
