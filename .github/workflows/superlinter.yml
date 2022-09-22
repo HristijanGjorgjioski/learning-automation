@@ -5,16 +5,15 @@ on:
     branches: [ master ]
 
 jobs:
-  super-lint:
-    name: Lint code base
+  test_pull_request:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/setup-node@v2
           with:
             node-version: '16'
-          - run: cd server
-          - run: npm ci        
-          - run: npm run build        
-          - run: cd ../client
-          - run: npm ci        
-          - run: npm run build
+        - run: cd server
+        - run: npm ci        
+        - run: npm run build        
+        - run: cd ../client
+        - run: npm ci        
+        - run: npm run build
