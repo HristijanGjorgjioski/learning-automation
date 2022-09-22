@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter basename={'https://hristijangjorgjioski.github.io/learning-automation'}>
       <Routes>
-        <Route path="test" element={<Test />} />
+        <Route path="/test" element={<Test />} />
         Hristijan / url
       </Routes>
     </BrowserRouter>
